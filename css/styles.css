@@ -94,6 +94,12 @@ body{
     line-height: 1,172;
     letter-spacing: 0.02em;
     cursor: pointer;
+    position: relative;
+    top: 2px;
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .navigation-list-link:visited {
     color:#212121;
@@ -101,6 +107,30 @@ body{
 .navigation-list-link:hover,
 .navigation-list-link:focus{
     color: var(--main-color);
+}
+.navigation-list-link::after{
+    content:"";
+    display:block;
+    height: 4px;
+    border-radius: 2px;
+    background-color: transparent;
+    position: relative;
+    top:27px;
+
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}    
+.navigation-list-link:hover::after,
+.navigation-list-link:focus::after{
+    background-color: var(--main-color);
+}
+
+.current .navigation-list-link{
+    color: var(--main-color);
+}
+.current .navigation-list-link::after{
+    background-color: var(--main-color);
 }
 
 .contact-list{
@@ -119,38 +149,19 @@ body{
 }
 
 .contact-list-item a{
-color: var(--secoundary-color);
-cursor: pointer;
- fill: var(--secoundary-color);
+    color: var(--secoundary-color);
+    cursor: pointer;
+    fill: var(--secoundary-color);
+
+    transition-property: color;
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact-list-item:hover a,
 .contact-list-item:focus a{
     color: var(--main-color);
     fill: var(--main-color) ;
-}
-
-.not-current:hover::after,
-.not-current:focus::after,
-.current::after{
-    content:"";
-    display:block;
-    height: 4px;
-    border-radius: 2px;
-    background-color: var(--main-color);
-    position: relative;
-    top:27px;
-}
-
-.navigation-list-item .current{
-    color: var(--main-color);
-    position: relative;
-    top: 2px;
-}
-
-.navigation-list-item .not-current:hover,
-.navigation-list-item .not-current:focus{
-    position: relative;
-    top: 2px;
 }
 
 /* ===END=HEADER====== */
@@ -318,6 +329,11 @@ h2{
     border: 1px solid #AFB1B8;
     border-radius: 4px;
     fill: #afb1b8 ;
+
+    transition-property: border;
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clinets-list-item:hover,
@@ -351,6 +367,10 @@ h2{
     letter-spacing: 0.03em;
     padding: 6px 22px;
     text-align: center;
+
+    transition-property: color, background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .filter-btn:hover,
 .filter-btn:focus{
@@ -369,6 +389,10 @@ h2{
     background: #FFFFFF;
     border: 1px solid #EEEEEE;
     height: 404px;
+
+    transition-property: box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .port-card:hover,
 .port-card:focus{
@@ -456,6 +480,15 @@ h2{
 
 .footer-list-item a{
     color: rgba(255, 255, 255, 0.6);
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-list-item a:hover,
+.footer-list-item a:focus{
+    color: var(--main-color);
 }
 
  .footer .address{
@@ -492,10 +525,20 @@ h2{
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.1);
     fill: #afb1b8;
+
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
  }
  .social-icon:hover,
  .social-icon:focus{
     background-color: var(--main-color);
+ }
+
+ .icon-social{
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
  }
  .social-icon:hover .icon-social,
  .social-icon:focus .icon-social{
@@ -519,6 +562,15 @@ h2{
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
     padding-left: 16px;
+
+    transition-property: border;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.newsletter-form:hover,
+.newsletter-form:focus{
+    border: 1px solid var(--main-color);
 }
 
 .newsletter-btn{
@@ -533,6 +585,7 @@ h2{
     align-items: center;
     gap: 24px;
     padding-left: 42px;
+    cursor: pointer;
 }
 
 /* ===END=FOOTER==== */
@@ -598,6 +651,13 @@ h2{
 .modal-label{
     position: relative;
     right: 18px;
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-label:focus-within .icon-modal,
+.modal-label:hover .icon-modal{
+    fill: var(--main-color);
 }
 
 .icon-modal{
@@ -610,24 +670,30 @@ h2{
 .modal-input{
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
-    width: 406px;
+    width: 400px;
     height: 18px;
     margin-right: 32px; 
-    padding: 10px 11px 10px 29px;
+    padding: 10px 11px 10px 35px;
     margin-top: 4px;
     margin-bottom: 6px;
     position: relative;
     left: 18px;
-}
 
-.modal-input:focus{
+    transition-property: border;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-input:focus,
+.modal-input:hover{
     border: 1px solid var(--main-color);
-    background-color: #fff;
 }
-
-.modal-label:focus-within .icon-modal{
-    fill: var(--main-color);
-    background-color: #fff;
+.modal-input::placeholder{
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
 }
 
 .modal .comment{
@@ -678,14 +744,22 @@ h2{
     right: 3px;
     background-color: #fff;
     z-index: 1;
+    opacity: 1;
+
+    transition-property: opacity;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-regulations-checkbox:checked::after{
     content: "";
-    background: none;
-    border: none;
-    width: 16px;
-    height: 15px;
+    width: 12px;
+    height: 11px;
+    opacity: 0;
+
+    transition-property: opacity;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-checked{
@@ -724,5 +798,3 @@ h2{
     visibility: hidden;
     opacity: 0;
 }
-
-  
