@@ -1,0 +1,33 @@
+@import '../utils/variables.scss';
+
+.title{
+    background-color: $secoundary-color;
+    padding: 200px 0;
+    background-image: url("/images/Img4.jpg");
+    background-position: 50% 50%;
+    &__container{
+        text-align: center;
+    }
+    &__content{
+        color: white;
+        font-weight: 900;
+        font-size: 44px;
+        letter-spacing: 0.06em;
+        line-height: 1.36;
+        margin-bottom: 30px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    &__btn{
+        background-color: $main-color;
+        border: none;
+        border-radius: 4px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        color: white;
+        cursor: pointer;
+        @include bold-font(16px, 30px);
+        letter-spacing: 0.03em;
+        padding: 10px 41px;
+        margin-left: auto;
+    }
+}
