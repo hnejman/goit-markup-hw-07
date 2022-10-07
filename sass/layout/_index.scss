@@ -1,4 +1,6 @@
 @import '../utils/variables.scss';
+@import '../components/socials';
+@import '../components/container';
 
 .title{
     background-color: $secoundary-color;
@@ -42,6 +44,7 @@
         color: $light-grey;
         @include main-font(14px, 1.71);
         text-align: justify;
+        margin-bottom: 94px;
     }
     &__icon{
         width: 270px;
@@ -75,8 +78,8 @@
         padding: 27px 0 27px 0;
     }
     &__content{
-        color: white;
         @include bold-font(14px, 16px);
+        color: white;
         text-align: center;
         text-transform: uppercase;
     }
@@ -107,8 +110,7 @@
         margin-top: 30px;
         margin-bottom: 10px;
     }
-    & .socials{
-        padding: 0 32px;
+    .socials{
         margin-top: 16px;
     }
 }
@@ -124,6 +126,7 @@
         border: 1px solid $client-background;
         border-radius: 4px;
         fill: $client-background ;
+        @include animation(fill border);
         &:hover,
         &:focus{
             fill: $main-color ;

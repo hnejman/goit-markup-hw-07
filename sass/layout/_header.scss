@@ -80,7 +80,7 @@ header{
     &__item &__link{
         color: $light-grey;
         fill: $light-grey;
-        @include animation(fill color);
+        @include animation(color fill);
     }
 
     &__item:hover &__link,
