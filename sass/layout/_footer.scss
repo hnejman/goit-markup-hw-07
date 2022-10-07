@@ -1,0 +1,28 @@
+@import '../utils/variables';
+@import '../components/container';
+@import '../components/common';
+
+.footer{
+    background-color: $secoundary-color;
+    padding: 60px 0;
+}
+
+.address{
+    &__list{
+        display: grid;
+        grid-template-columns: auto;    
+        gap: 9px;
+    }
+    &__contacts{
+        color: white;
+        margin-bottom: 9px;
+    }
+    &__link{
+        color: rgba(255, 255, 255, 0.6);
+        @include animation(color);
+        &:hover,
+        &:focus{
+            color: $main-color;
+        } 
+    }
+}
