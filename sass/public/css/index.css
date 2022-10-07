@@ -33,4 +33,38 @@
   letter-spacing: 0.03em;
   padding: 10px 41px;
   margin-left: auto;
+}
+
+.paragraphs {
+  margin-bottom: 94px;
+}
+.paragraphs__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+}
+.paragraphs__item {
+  color: #757575;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  text-align: justify;
+}
+.paragraphs__icon {
+  width: 270px;
+  height: 120px;
+}
+.paragraphs__title {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.143;
+  margin-top: 30px;
+  padding-bottom: 10px;
+  text-align: left;
+  text-transform: uppercase;
 }/*# sourceMappingURL=index.css.map */

@@ -231,7 +231,7 @@ h1{
 }
 
 .par{
-    color: var(-secoundary-color);
+    color: var(--secoundary-color);
     font-weight: 400;
     font-size: 14px;
     line-height: 1.71;
