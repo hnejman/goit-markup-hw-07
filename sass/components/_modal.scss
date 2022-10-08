@@ -27,6 +27,7 @@
     border: 1px solid rgba(0, 0, 0, 0.1);
     padding-left: 6px;
     padding-top: 2px;
+    fill:#000;
 }
 
 .modal-form{
@@ -50,15 +51,13 @@
         width: 448px;
         height: 23px;
         text-align: center;
-        text-align: center;
-        @include main-font(20px, 1.15);
+        @include bold-font(20px, 1.15);
         color: $dark-grey;
         margin-bottom: 8px;
     }
     &__label{
         position: relative;
         right: 18px;
-        @include animation(fill);
         &:focus-within .modal-form__icon,
         &:hover .modal-form__icon{
             fill: $main-color;
@@ -85,6 +84,7 @@
         left: 30px;
         top: 35px;
         z-index: 1;
+        @include animation(fill);
     }
     &__input{
         border: 1px solid rgba(33, 33, 33, 0.2);
@@ -124,14 +124,14 @@
             z-index: 1;
             opacity: 1;
             @include animation(opacity);
-            &:checked{
-                &::after{
-                    content: "";
-                    width: 12px;
-                    height: 11px;
-                    opacity: 0;
-                    @include animation(opacity);
-                }
+        }
+        &:checked{
+            &::after{
+                content: "";
+                width: 12px;
+                height: 11px;
+                opacity: 0;
+                @include animation(opacity);
             }
         }
     }
@@ -165,6 +165,7 @@
         width: 200px;
         margin-left: 124px;
         margin-top: 30px;
+        cursor: pointer;
     }
 
 }

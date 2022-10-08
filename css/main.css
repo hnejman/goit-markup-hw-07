@@ -1077,6 +1077,7 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.1);
   padding-left: 6px;
   padding-top: 2px;
+  fill: #000;
 }
 
 .modal-form {
@@ -1102,10 +1103,9 @@ body {
   width: 448px;
   height: 23px;
   text-align: center;
-  text-align: center;
   font-family: "Roboto", sans-serif;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
   color: #212121;
@@ -1114,12 +1114,6 @@ body {
 .modal-form__label {
   position: relative;
   right: 18px;
-  -webkit-transition-property: fill;
-  transition-property: fill;
-  -webkit-transition-duration: 250ms;
-          transition-duration: 250ms;
-  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-form__label:focus-within .modal-form__icon, .modal-form__label:hover .modal-form__icon {
   fill: #2196F3;
@@ -1185,6 +1179,12 @@ body {
   left: 30px;
   top: 35px;
   z-index: 1;
+  -webkit-transition-property: fill;
+  transition-property: fill;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-form__input {
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -1275,7 +1275,7 @@ body {
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal-form__checkbox::after:checked::after {
+.modal-form__checkbox:checked::after {
   content: "";
   width: 12px;
   height: 11px;
@@ -1326,4 +1326,5 @@ body {
   width: 200px;
   margin-left: 124px;
   margin-top: 30px;
+  cursor: pointer;
 }/*# sourceMappingURL=main.css.map */
